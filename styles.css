@@ -1,25 +1,92 @@
 body {
-    background-color: #fcfbf7; 
+    background-color: #FAF7F5;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #514A54;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
+
+header {
+    background-color: #E9DFF2;
+    padding: 30px 20px;
+    text-align: center;
+}
+
 h1 {
-    text-align: center;
-     color: #2c3e50;
+    color: #665477;
+    font-size: 30px;
 }
-h2 {
-    text-align: center;
-    color: #2c3e50;
-}
+
 .descripcion {
     max-width: 700px;
-    margin: 0 auto 30px auto;
-    text-align: center;
-    line-height: 1.6;
-    font-size: 1.05rem;
+    margin: 20px auto;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #625B66;
 }
+
+nav {
+    background-color: #D8C9E5;
+    padding: 12px;
+    border-radius: 10px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #51435F;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
+}
+
+#menu li a:hover {
+    background-color: #F8EDF2;
+    color: #A47794;
+}
+
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #957AAB;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: #957AAB;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+section p {
+    line-height: 1.7;
+}
+
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -27,54 +94,102 @@ h2 {
     max-width: 1100px;
     margin: 0 auto;
 }
+
 .tarjeta {
     background-color: white;
-    border-radius: 8px;
-    border: #5c4a68;
+    border-radius: 12px;
+    border: 1px solid #E9DFF2;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
+
 .tarjeta h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
-    color: #2c3e50;
+    color: #957AAB;
 }
+
 .tarjeta p {
-    font-size: 0.9rem;
-    color: #555;
+    color: #625B66;
+    font-size: 15px;
     flex-grow: 1;
 }
+
 .tarjeta img {
     width: 100%;
     height: 150px;
     object-fit: contain;
-    border-radius: 4px;
     margin-bottom: 15px;
 }
+
 .tarjeta a {
     text-decoration: none;
     margin-top: auto;
 }
+
 .tarjeta button {
     width: 100%;
-    background-color: #5c4a68;
-    color: white;
+    background-color: #C8B4D9;
+    color: #51435F;
     border: none;
-    padding: 4px;
+    padding: 10px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s;
 }
+
 .tarjeta button:hover {
-    background-color: #2d3748;
+    background-color: #B49BCB;
+    color: white;
 }
+
 footer {
+    background-color: #E9DFF2;
+    color: #665477;
     text-align: center;
+    padding: 20px;
     margin-top: 40px;
-    font-size: 0.9rem;
-    color: #666;
+}
+
+.volver {
+    display: inline-block;
+    background-color: #D8C9E5;
+    color: #51435F;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.volver:hover {
+    background-color: #B49BCB;
+    color: white;
+}
+
+.contenedor-volver {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 23px;
+    }
+
+    #menu {
+        gap: 5px;
+    }
+
+    #menu li a {
+        padding: 8px 10px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
 }
